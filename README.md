@@ -7,7 +7,7 @@ _**By Anelle Mensah**_
 * Java
 
 ## Description
-This repository contains my code for the Unit 1 project in the Treehouse Jvaa Techdegree curriculum. This project uses Java to create a console game where users can guess the number of items in a jar. The program prompts the user to enter the item type, the maximum number of items that can be in the jar, and their guess for how many items are in the jar. The program displays messages regarding the user's guesses and if they win the game.
+This repository contains my code for the Unit 1 project in the Treehouse Jvaa Techdegree curriculum. This project uses Java to create a console game where users can guess the number of items in a jar. The program prompts the user to enter the item type, the maximum number of items that can be in the jar, and their guess for how many items are in the jar. The program displays messages as they play the game.
 
 ## Known Bugs
 No known bugs at this time.
