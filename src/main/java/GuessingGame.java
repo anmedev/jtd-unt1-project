@@ -33,9 +33,9 @@ public class GuessingGame {
       // Indicates whether the game is still active (true) or has been won (false).
       boolean isGameStillActive = true;
       
-       // Loop that runs until the correct guess is made, prompting for guesses and providing feedback.
+      // Loop that runs until the correct guess is made, prompting for guesses and providing feedback.
       while (isGameStillActive) {
-    // Reads and stores the user's input for the guess in the variable 'guess'.
+      // Reads and stores the user's input for the guess in the variable 'guess'.
       int guess = scanner.nextInt();
     
       if (guess > maxNumOfItems) {
