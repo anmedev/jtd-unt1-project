@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class GuessingGame {
     public static void main(String[] args) {
       
-      // Creates a Scanner instance named 'scanner' that is sed for capturing user input throughout the game.
+      // Creates a Scanner instance named 'scanner' that is used for capturing user input throughout the game.
       Scanner scanner = new Scanner(System.in);
       
       // Displays the game's welcome message and introduction for the user.
