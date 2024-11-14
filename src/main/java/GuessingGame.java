@@ -8,7 +8,7 @@ public class GuessingGame {
       
       // Displays the game's welcome message and introduction for the user.
       System.out.println();
-      System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~WELCOME TO GUESSMASTER JAVA!~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
+      System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~WELCOME TO GUESSMASTER JAVA!~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       System.out.println("\nBefore we get started, we have some questions we'd like you to answer...");
       
       // Prompts the user to enter the type of item to be stored in the jar.
@@ -33,27 +33,28 @@ public class GuessingGame {
       // Indicates whether the game is still active (true) or has been won (false).
       boolean isGameStillActive = true;
       
-      // Loop that runs until the correct guess is made, prompting for guesses and providing feedback.
-      while(isGameStillActive) {
-        // Reads and stores the user's input for the guess in the variable 'guess'.
-        int guess = scanner.nextInt();
-        if (guess > maxNumOfItems) {
+       // Loop that runs until the correct guess is made, prompting for guesses and providing feedback.
+      while (isGameStillActive) {
+    // Reads and stores the user's input for the guess in the variable 'guess'.
+      int guess = scanner.nextInt();
+    
+      if (guess > maxNumOfItems) {
           System.out.printf("Your guess must be less than %d! Please try again: ", maxNumOfItems);
-        } else if (guess > jar.getCurrentNumOfItems()) {
-          numOfGuesses += 1;
-          System.out.print("Your guess is too high! Please try again: ");
-        } else if (guess < jar.getCurrentNumOfItems()) {
-          numOfGuesses += 1;
-          System.out.print("Your guess is too low! Please try again: ");
         } else {
-          numOfGuesses += 1;
-          isGameStillActive = false;
-          
-          // Displays a congratulatory message with the total attempts when the correct guess is made.
-          System.out.println("\n~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~CONGRATULATIONS!~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
-          System.out.printf("Look at you go! You got it in %d attempt(s)! %n", numOfGuesses);
+            // Increment guess count only if the guess is valid
+            numOfGuesses += 1;
+        
+          if (guess > jar.getCurrentNumOfItems()) {
+              System.out.print("Your guess is too high! Please try again: ");
+          } else if (guess < jar.getCurrentNumOfItems()) {
+              System.out.print("Your guess is too low! Please try again: ");
+          } else {
+              // Correct guess ends the game
+              isGameStillActive = false;
+              System.out.println("\n~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~CONGRATULATIONS!~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+              System.out.printf("Look at you go! You got it in %d attempt(s)! %n", numOfGuesses);
+          }
         }
       }
     }
-  }
-
+ }
